@@ -60,8 +60,8 @@ public class Task {
 		this.taskDescription = description;
 	}
 
-	public LocalDate getTimestamps() {
-		return timestamps;
+	public String getTimestamps() {
+		return timestamps.toString();
 	}
 
 	@Override
