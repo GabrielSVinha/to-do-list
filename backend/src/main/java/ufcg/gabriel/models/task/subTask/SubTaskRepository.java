@@ -1,12 +1,11 @@
-package ufcg.gabriel.task.subTask;
+package ufcg.gabriel.models.task.subTask;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 
-/**
- * Created by user on 07/02/17.
- */
-public interface SubTaskRepository extends JpaRepository<SubTask, long> {
+import java.util.ArrayList;
+
+public interface SubTaskRepository extends JpaRepository<SubTask, Long> {
 
     public ArrayList<SubTask> findBytask_id(@Param("task_id") long task_id);
 
