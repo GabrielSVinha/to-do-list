@@ -1,0 +1,89 @@
+div.taskList div#configuration{
+  background: rgba(147,206,222,1);
+  background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(28%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
+  background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: -o-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: -ms-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+  width: 75%;
+  font: Helvetica, Verdana, sans-serif;
+  font-size: 115%;
+}
+
+div.taskList div#options{
+  background: rgba(147,206,222,1);
+  background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(28%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
+  background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: -o-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: -ms-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 28%, rgba(73,165,191,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+  width: 110%;
+  font: Helvetica, Verdana, sans-serif;
+}
+
+div.taskList  div#options button{
+  background:none!important;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  cursor: pointer;
+  font-size: 100%;
+}
+
+div.taskList  div#configuration img{
+  position: relative;
+  float: right;
+}
+
+div.taskList {
+  width: 200px;
+}
+ 
+div.taskList h2 {
+  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ 
+div.taskList  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 700%
+}
+ 
+div.taskList  li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+
+}
+ 
+div.taskList  li:last-child {
+  border: none;
+}
+ 
+div.taskList  li p {
+  text-decoration: none;
+  color: #000;
+  display: inline;
+  width: 200px;
+ 
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+div.taskList  li img{
+  width: 2%;
+  display: inline;
+}
+ 
+

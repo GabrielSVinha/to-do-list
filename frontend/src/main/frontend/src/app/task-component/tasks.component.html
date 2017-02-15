@@ -1,0 +1,20 @@
+<div class="taskList">
+	<div id="configuration">
+		Configuration
+		<img (click)="getOptions()" src="../../assets/images/down.png" >
+	</div>
+	<div id="options" *ngIf="opts">
+		<button type="submit" value="addButton" (click)="addTasks()">Add new Task</button><br>
+		<button type="submit" value="completeButton" (click)="completeTasks()">Complete selected tasks</button><br>
+		<button type="submit" value="removeButton" (click)="deleteTasks()">Remove selected tasks</button><br>
+		<button type="submit" value="viewButton" (click)="viewTasks()">View selected task</button><br>
+	</div>
+	<ul>
+		<li *ngFor="let task of tasks">
+			<input type="checkbox" name="task.name" value="task.id" (click)="selectOptions(task.id)"> 
+			<p href="#">{{task.name}}</p>
+			<img src="../../assets/images/checkmark.png" *ngIf="task.completed">
+			<img src="../../assets/images/warning.png" *ngIf="!task.completed">
+		</li>
+	</ul>
+</div>
