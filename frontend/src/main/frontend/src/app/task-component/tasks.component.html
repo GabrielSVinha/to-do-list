@@ -1,14 +1,21 @@
 <div class="taskList">
 	<div id="configuration">
+		<img src="../../assets/images/processes.png">
 		Configuration
-		<img (click)="getOptions()" src="../../assets/images/down.png" >
+		<!-- <img (click)="getOptions()" src="../../assets/images/down.png" *ngIf="!opts" id="opts"> -->
+		<!-- <img (click)="getOptions()" src="../../assets/images/up.png" *ngIf="opts" id="opts"> -->
+		<button (click)="getOptions()" *ngIf="opts"><img src="../../assets/images/up.png"></button>
+		<button (click)="getOptions()" *ngIf="!opts"><img src="../../assets/images/down.png"></button>
 	</div>
 	<div id="options" *ngIf="opts">
-		<button type="submit" value="addButton" (click)="addTasks()">Add new Task</button><br>
-		<button type="submit" value="completeButton" (click)="completeTasks()">Complete selected tasks</button><br>
-		<button type="submit" value="removeButton" (click)="deleteTasks()">Remove selected tasks</button><br>
-		<button type="submit" value="viewButton" (click)="viewTasks()">View selected task</button><br>
+		<img src="../../assets/images/plus-green.png"><button type="submit" value="addButton" (click)="addTasks()">Add new Task</button><br>
+		<img src="../../assets/images/order.png"><button type="submit" value="completeButton" (click)="completeTasks()">Complete selected tasks</button><br>
+		<img src="../../assets/images/delete.png"><button type="submit" value="removeButton" (click)="deleteTasks()">Remove selected tasks</button><br>
+		<img src="../../assets/images/edit.png"><button type="submit" value="viewButton" (click)="viewTasks()">View selected task</button><br>
 	</div>
+</div>
+
+<div class="center-box">
 	<ul>
 		<li *ngFor="let task of tasks">
 			<input type="checkbox" name="task.name" value="task.id" (click)="selectOptions(task.id)"> 

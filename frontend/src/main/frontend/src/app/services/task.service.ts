@@ -12,7 +12,13 @@ export class TaskService  {
 	
 	private baseUrl = 'http://localhost:8080/api';
 
-	constructor(private http: Http) {}
+	private headers;
+
+	constructor(private http: Http) {
+	  this.headers = new Headers();
+      this.headers.append('Content-Type', 'application/json');
+      this.headers.append('Access-Control-Allow-Origin', '*');
+	}
 
 	getAll(): Promise<Task[]>{
 		return this.http.get(this.baseUrl + '/tasks').map(res => {
@@ -33,6 +39,20 @@ export class TaskService  {
 				this.handleError(res);
 			}
 		}).toPromise();
+	}
+
+	updateStatus(id: number, status: boolean){
+		this.http.post(
+				this.baseUrl + "/tasks/status",
+				{
+					"id": id,
+					"status": status
+				},
+				this.headers
+			).subscribe(
+				data => { alert("Completed request: POST") },
+				error => { this.handleError }
+			);
 	}
 
 	private handleError (error: Response | any) {

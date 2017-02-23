@@ -38,18 +38,28 @@ export class TasksComponent implements OnInit {
   }
 
   selectOptions(id: number){
-    this.selected.push(id);
+    if(this.selected.indexOf(id) === -1) {
+      this.selected.push(id);
+    }else{
+      let tmp = this.selected;
+      this.selected = tmp.slice(0, this.selected.indexOf(id)).concat(tmp.slice(this.selected.indexOf(id)+1, this.selected.length))
+    }
   }
 
   completeTasks(){
-
+    this.tasks.map(t => {
+      if(this.selected.indexOf(t.id) !== -1 && !t.completed) {
+        this.tService.updateStatus(t.id, true);
+        t.completed = true;
+      }
+    });
   }
 
   deleteTasks(){
 
   }
 
-  viewTask(){
+  viewTasks(){
 
   }
 
@@ -62,6 +72,11 @@ export class TasksComponent implements OnInit {
   }
 
   getOptions(){
-    this.opts = true;
+    if(this.opts === true) {
+      this.opts = false;
+    }else{
+      this.opts = true;
+    }
+    console.log("Opts= ", this.opts);
   }
 }
